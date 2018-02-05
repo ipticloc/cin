@@ -14,10 +14,18 @@ Sessao_CIN::ValidaSessao();
 <head>
 <meta charset="utf-8">
 	<title>Atualizar Clientes</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
- <link rel="stylesheet" type="text/css" href="../css/bootstrap-responsive.min.css">
+
+
+	
+  <link rel="stylesheet" type="text/css" href="style.css">
+  
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap-responsive.min.css">
+  
   <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-  <script type="text/javascript" scr="../js/bootstrap.min.js"></script>
+
+  <script type="text/javascript" scr="../js/bootstrap.min.js">
+  </script>
+
   <style type="text/css">
     .a{
       font-size: 70px;
@@ -25,8 +33,11 @@ Sessao_CIN::ValidaSessao();
       width: 35%;
     }
   </style>
+
 <body>
- <?php include("menu_topo.php"); ?>
+ <?php include("menu_topo.php"); 
+  
+ ?>
 
     <div class="container-fluid">
     <div class="row-fluid">

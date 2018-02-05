@@ -1,3 +1,4 @@
+
 <?php
 
 include '../Classes/Sessao_CIN.php';
@@ -22,7 +23,57 @@ Sessao_CIN::ValidaSessao();
       font-size: 40px;
       width: 20%;
     }
+    .c {
+      color: red;
+    }
   </style>
+<script>
+function formatar(mascara, documento){
+  var i = documento.value.length;
+  var saida = mascara.substring(0,1);
+  var texto = mascara.substring(i)
+  
+  if (texto.substring(0,1) != saida){
+            documento.value += texto.substring(0,1);
+  }
+  
+  
+}
+</script>
+
+<script src="../js/jquery.js" type="text/javascript"></script>
+        <script src="../js/jquery.maskedinput.js" type="text/javascript"></script>
+        <script >
+            $(document).ready(function(){
+               $("#date").mask("99/99/9999");
+               $("#phone").mask("(99) 99999-9999");
+               $("#tin").mask("99-9999999");
+               $("#ssn").mask("999-99-9999");
+               $("#cnpj").mask("99.999.999/9999-99");
+               
+               $(".selecao").click(function(){
+                   var Campo= $(this).val();
+                   var inserirCampo= '<input type="text" id="'+Campo+'" name= "'+Campo+'">';
+                   $("#localCampo").html(inserirCampo);
+                   $("#cnpj").mask("99.999.999/9999-99");
+                   $("#cpf").mask("999.999.999-99");
+                   
+               })
+            
+});
+
+    </script>
+
+<script type="text/javascript">
+  function validar(dom,tipo){
+  switch(tipo){
+    case'num':var regex=/[A-Za-z]/g;break;
+    case'text':var regex=/\d/g;break;
+  }
+  dom.value=dom.value.replace(regex,'');
+}
+</script>
+
 </head>
 <body>
  <?php include("menu_topo.php"); ?>
@@ -38,28 +89,43 @@ Sessao_CIN::ValidaSessao();
             
           </div>
           <div class="container">
-            <form method="post" action="../DAO/CadastroClientesDB.php">
+
+
+            <form method="post" action="../DAO/ValidarCPFDB.php" ">
+            <!-- action="../DAO/ValidarCPFDB.php" -->
+            <!-- action="../DAO/CadastroClientesDB.php" -->
+
 
 <fieldset>
 <legend>Cadastro</legend>
 
-    <label>Nome do Cliente</label>
-    <input type="text" name="NM_CLIENTE" required="required" placeholder="Diga o nome" >
+    <label>Nome do Cliente<span class="c"> *</span></label>
+    <input type="text" name="NM_CLIENTE" required="required" placeholder="Nome" >
     <br>
-    <label>Cpf ou Cnpj</label>
-    <input type="text" name="DS_CPF_CNPJ" required="required" placeholder="Diga o cnpj">
+
+    CNPJ: <input  selected ="selected" type="radio" name="DS_CPF_CNPJ" value="cnpj" class="selecao" checked>
+    CPF: <input selected ="selected" type="radio" name="DS_CPF_CNPJ" value="cpf" class="selecao">
+    <span class="c"> *</span>
+
+    </br>
+      
+      <div id="localCampo">
+          <input type="text" id="cnpj" name="DS_CPF_CNPJ" required="required">
+
+      </div> 
+  <label>Endereço<span class="c"> *</span></label>
+    <input type="text" name="DS_ENDEREÇO" required="required" placeholder="Endereço">
     <br>
-    <label>Endereço</label>
-    <input type="text" name="DS_ENDEREÇO" required="required" placeholder="Diga o Endereço">
-    <br>
-    <label>Telefone</label>
-    <input type="tel" name="NR_TELEFONE" required="required" placeholder="Diga o Telefone">
-    <br>
-    <label>e-mail</label>
-    <input type="email" name="DS_EMAIL" required="required" placeholder="Diga o e-mail">
+
+    <label>Telefone<span class="c"> *</span></label>
+     <input type="tel" name="NR_TELEFONE" maxlength="12" onkeyup="validar(this,'num');" required="required" placeholder="Telefone" >
+     <br>
+   
+   
+    <label>E-mail <span class="c"> *</span></label>
+    <input type="email" name="DS_EMAIL" required="required" placeholder="E-mail">
     <div>
       <button class="btn btn-success">Salvar</button>
-      
       <a href="listarclientes.php" class="btn btn-info">Voltar</a>
     </div>
     </div>

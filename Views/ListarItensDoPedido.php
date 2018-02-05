@@ -78,7 +78,7 @@ $TodosItensDoPedido = $banco->executeQuery($sql);
      <a class="btn btn-primary" href="CadastroItemPedido.php?ID_PEDIDO=<?php echo $ID_PEDIDO;?>">Novo</a>
      </div>
      <br>
-     <table style="width:90%;" class="table table-striped">
+     <table style="width:90%" class="table table-striped">
      <tr>
           <td>ID Pedido</td>
           <td>Sequência do pedido</td>
@@ -180,7 +180,7 @@ $TodosItensDoPedido = $banco->executeQuery($sql);
 
                 </td>";
 
-                echo ";</tr>";
+                echo "</tr>";
 
          }
     ?>
