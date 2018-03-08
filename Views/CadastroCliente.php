@@ -57,6 +57,7 @@ function formatar(mascara, documento){
                    $("#localCampo").html(inserirCampo);
                    $("#cnpj").mask("99.999.999/9999-99");
                    $("#cpf").mask("999.999.999-99");
+
                    
                })
             
@@ -91,9 +92,8 @@ function formatar(mascara, documento){
           <div class="container">
 
 
-            <form method="post" action="../DAO/ValidarCPFDB.php" ">
-            <!-- action="../DAO/ValidarCPFDB.php" -->
-            <!-- action="../DAO/CadastroClientesDB.php" -->
+            <form method="post" action="../DAO/CadastroClientesDB.php" >
+
 
 
 <fieldset>
@@ -116,13 +116,17 @@ function formatar(mascara, documento){
   <label>Endereço<span class="c"> *</span></label>
     <input type="text" name="DS_ENDEREÇO" required="required" placeholder="Endereço">
     <br>
-
+  
     <label>Telefone<span class="c"> *</span></label>
-     <input type="tel" name="NR_TELEFONE" maxlength="12" onkeyup="validar(this,'num');" required="required" placeholder="Telefone" >
+    <input  id="phone" type="tel" name="NR_TELEFONE" onkeyup="validar(this,'num');" required="required" placeholder="Telefone">
+
+     <!--<input id="phone" type="tel" name="NR_TELEFONE" onkeyup="validar(this,'num');" required="required" placeholder="Telefone">-->
+    
      <br>
    
    
     <label>E-mail <span class="c"> *</span></label>
+
     <input type="email" name="DS_EMAIL" required="required" placeholder="E-mail">
     <div>
       <button class="btn btn-success">Salvar</button>
@@ -142,5 +146,6 @@ function formatar(mascara, documento){
       </footer>
 
     </div><!--/.fluid-container-->
+
 </body>
 </html>

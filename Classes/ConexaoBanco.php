@@ -30,7 +30,7 @@ class ConexaoBanco
 		}
 		elseif(!mysqli_select_db($this->link,$this->database))
 		{
-			echo "O Bando de Dados solicitado não pode ser aberto!<br />";
+			echo "O Banco de Dados solicitado não pode ser aberto!<br />";
 			echo "Erro: " . mysqli_error();
 			die();
 		}

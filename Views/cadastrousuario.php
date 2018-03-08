@@ -41,8 +41,8 @@ Sessao_CIN::ValidaSessao();
           <legend>Cadastro</legend>
           <label>Nome:</label>
           <input type="text" name="nome" required="required" placeholder="Diga o Nome">
-          <label>e-mail:</label>
-          <input type="email" name="Email" required="required" placeholder="Diga o E-mail">
+          <label>E-mail:</label>
+          <input type="email" name="DS_Email" required="required" placeholder="Diga o E-mail">
           <label>Senha:</label>
           <input type="password" name="Senha" required="required" placeholder="Diga a Senha">
           <div>
@@ -53,6 +53,7 @@ Sessao_CIN::ValidaSessao();
       </form>
       </div>
       </div>
+
 </body>
 </head>
 </html>
