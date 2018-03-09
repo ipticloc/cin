@@ -118,7 +118,7 @@ function formatar(mascara, documento){
     <br>
   
     <label>Telefone<span class="c"> *</span></label>
-    <input  id="phone" type="tel" name="NR_TELEFONE" onkeyup="validar(this,'num');" required="required" placeholder="Telefone">
+    <input  id="phone2" data-mask="(99) 9 9999-9999" type="tel" name="NR_TELEFONE" onkeyup="validar(this,'num');" required="required" placeholder="Telefone">
 
      <!--<input id="phone" type="tel" name="NR_TELEFONE" onkeyup="validar(this,'num');" required="required" placeholder="Telefone">-->
     
@@ -148,4 +148,5 @@ function formatar(mascara, documento){
     </div><!--/.fluid-container-->
 
 </body>
+<script src="../js/jasny-bootstrap.js"></script>
 </html>
