@@ -190,7 +190,11 @@ if($PesquisaId != ""){
 
         <form class="form-inline">
           <label>ID</label>
+<<<<<<< HEAD
+          <input type="text" name="PesquisaIdPedido" required="required" placeholder="Ex: 231">
+=======
           <input type="text" name="PesquisaIdPedido" placeholder="Ex: 231">
+>>>>>>> 73a74eef9677186827527c4d55369ddb5c0e090c
          
           <input class="btn btn-info" type="submit" value="Pesquisar">
         </form>

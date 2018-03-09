@@ -28,6 +28,19 @@ $todosmaterias = $banco->executeQuery($sql);
  <link rel="stylesheet" type="text/css" href="../css/bootstrap-responsive.min.css">
  <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
  <script type="text/javascript" scr="../js/bootstrap.min.js"></script>
+<<<<<<< HEAD
+ <script>
+    function somenteNumeros(num) {
+        var er = /[^0-9.]/;
+        er.lastIndex = 0;
+        var campo = num;
+        if (er.test(campo.value)) {
+          campo.value = "";
+        }
+    }
+ </script>
+=======
+>>>>>>> 73a74eef9677186827527c4d55369ddb5c0e090c
  <style type="text/css">
    .a{
       font-size: 70px;
@@ -35,7 +48,20 @@ $todosmaterias = $banco->executeQuery($sql);
       width: 35%;
     }
  </style>
+<<<<<<< HEAD
+ <script>
+    function somenteNomes(num) {
+        var er = /[^a-z.]/;
+        er.lastIndex = 0;
+        var campo = num;
+        if (er.test(campo.value)) {
+          campo.value = "";
+        }
+    }
+ </script>
+=======
 
+>>>>>>> 73a74eef9677186827527c4d55369ddb5c0e090c
 
 </head>
 <body>
@@ -57,9 +83,15 @@ $todosmaterias = $banco->executeQuery($sql);
         <label>Pesquisa : </label>
         <form class="form-inline">
           <label>ID</label>
+<<<<<<< HEAD
+          <input class="form-control input-sm" name="PesquisaID_TIPOMATERIAL" required="required" onkeyup="somenteNumeros(this);" type="text"  ng-model="numero.valor" placeholder="Ex: 321" />
+          <label>TIPO DO MATERIAL</label>
+         <input class="form-control input-sm" name="PesquisaDS_TIPOMATERIAL" required="required" onkeyup="somenteNomes(this);" type="text"  ng-model="nomes.valor" placeholder="Ex:Algodão" />
+=======
           <input type="text" name="PesquisaID_TIPOMATERIAL" placeholder="Ex: 231">
           <label>TIPO DO MATERIAL</label>
           <input type="text" name="PesquisaDS_TIPOMATERIAL" placeholder="Algodão">
+>>>>>>> 73a74eef9677186827527c4d55369ddb5c0e090c
           <input class="btn btn-info" type="submit" value="Pesquisar">
         </form>
 

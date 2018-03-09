@@ -1,8 +1,12 @@
 
 <?php
 
+include '../Classes/ConexaoBanco.php';
+
 include '../Classes/Sessao_CIN.php';
 Sessao_CIN::ValidaSessao();
+
+$banco = new ConexaoBanco();
 
 ?>
 <!DOCTYPE html>
@@ -27,7 +31,15 @@ Sessao_CIN::ValidaSessao();
       color: red;
     }
   </style>
-<script>
+  <script>
+    function somenteNumeros(num) {
+        var er = /[^0-9.]/;
+        er.lastIndex = 0;
+        var campo = num;
+        if (er.test(campo.value)) {
+          campo.value = "";
+        }
+    }
 function formatar(mascara, documento){
   var i = documento.value.length;
   var saida = mascara.substring(0,1);
@@ -41,6 +53,7 @@ function formatar(mascara, documento){
 }
 </script>
 
+
 <script src="../js/jquery.js" type="text/javascript"></script>
         <script src="../js/jquery.maskedinput.js" type="text/javascript"></script>
         <script >
@@ -50,7 +63,7 @@ function formatar(mascara, documento){
                $("#tin").mask("99-9999999");
                $("#ssn").mask("999-99-9999");
                $("#cnpj").mask("99.999.999/9999-99");
-               
+              
                $(".selecao").click(function(){
                    var Campo= $(this).val();
                    var inserirCampo= '<input type="text" id="'+Campo+'" name= "'+Campo+'">';
@@ -92,9 +105,8 @@ function formatar(mascara, documento){
           <div class="container">
 
 
+
             <form method="post" action="../DAO/CadastroClientesDB.php" >
-
-
 
 <fieldset>
 <legend>Cadastro</legend>
@@ -103,25 +115,26 @@ function formatar(mascara, documento){
     <input type="text" name="NM_CLIENTE" required="required" placeholder="Nome" >
     <br>
 
-    CNPJ: <input  selected ="selected" type="radio" name="DS_CPF_CNPJ" value="cnpj" class="selecao" checked>
-    CPF: <input selected ="selected" type="radio" name="DS_CPF_CNPJ" value="cpf" class="selecao">
+
+    CNPJ: <input  selected ="selected" type="radio" required="required" name="DS_CPF_CNPJ" value="cnpj" class="selecao" checked >
+    CPF: <input selected ="selected" type="radio" required="required" name="DS_CPF_CNPJ" value="cpf" onkeyup="somenteNumeros(this);" type="text"  ng-model="numero.valor" >
+
     <span class="c"> *</span>
 
     </br>
       
       <div id="localCampo">
-          <input type="text" id="cnpj" name="DS_CPF_CNPJ" required="required">
+
+          <input class="form-control input-sm" id="cnpj" type="text" name="DS_CPF_CNPJ" required="required" ng-model="numero.valor" class="selecao">
 
       </div> 
   <label>Endereço<span class="c"> *</span></label>
-    <input type="text" name="DS_ENDEREÇO" required="required" placeholder="Endereço">
+    <input  type="text" name="DS_ENDEREÇO" required="required" placeholder="Endereço">
     <br>
-  
+
     <label>Telefone<span class="c"> *</span></label>
     <input  id="phone2" data-mask="(99) 9 9999-9999" type="tel" name="NR_TELEFONE" onkeyup="validar(this,'num');" required="required" placeholder="Telefone">
 
-     <!--<input id="phone" type="tel" name="NR_TELEFONE" onkeyup="validar(this,'num');" required="required" placeholder="Telefone">-->
-    
      <br>
    
    

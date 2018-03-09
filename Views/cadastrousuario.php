@@ -11,6 +11,19 @@ Sessao_CIN::ValidaSessao();
    <link rel="stylesheet" type="text/css" href="../css/bootstrap-responsive.min.css">
   <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
   <script type="text/javascript" scr="../js/bootstrap.min.js"></script>
+<<<<<<< HEAD
+  <script>
+    function somenteNomes(num) {
+        var er = /[^a-z.]/;
+        er.lastIndex = 0;
+        var campo = num;
+        if (er.test(campo.value)) {
+          campo.value = "";
+        }
+    }
+ </script>
+=======
+>>>>>>> 73a74eef9677186827527c4d55369ddb5c0e090c
   <style type="text/css">
     .a{
       font-size: 70px;
@@ -40,9 +53,15 @@ Sessao_CIN::ValidaSessao();
         <fieldset>
           <legend>Cadastro</legend>
           <label>Nome:</label>
+<<<<<<< HEAD
+        <input class="form-control input-sm" name="nome" required="required" onkeyup="somenteNomes(this);" type="text"  ng-model="nome.valor" placeholder="Diga o Nome" />
+          <label>e-mail:</label>
+          <input type="email" name="Email" required="required" placeholder="Diga o E-mail">
+=======
           <input type="text" name="nome" required="required" placeholder="Diga o Nome">
           <label>E-mail:</label>
           <input type="email" name="DS_Email" required="required" placeholder="Diga o E-mail">
+>>>>>>> 73a74eef9677186827527c4d55369ddb5c0e090c
           <label>Senha:</label>
           <input type="password" name="Senha" required="required" placeholder="Diga a Senha">
           <div>
@@ -53,7 +72,10 @@ Sessao_CIN::ValidaSessao();
       </form>
       </div>
       </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 73a74eef9677186827527c4d55369ddb5c0e090c
 </body>
 </head>
 </html>

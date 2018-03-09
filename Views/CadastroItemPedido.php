@@ -33,6 +33,29 @@ mysqli_close();
       width: 35%;
         }
   </style>
+<<<<<<< HEAD
+  <script>
+    function somenteNumeros(num) {
+        var er = /[^0-9.]/;
+        er.lastIndex = 0;
+        var campo = num;
+        if (er.test(campo.value)) {
+          campo.value = "";
+        }
+    }
+ </script>
+  <script>
+    function somenteNomes(num) {
+        var er = /[^a-z.]/;
+        er.lastIndex = 0;
+        var campo = num;
+        if (er.test(campo.value)) {
+          campo.value = "";
+        }
+    }
+ </script>
+=======
+>>>>>>> 73a74eef9677186827527c4d55369ddb5c0e090c
 </head>
 <body>
  <?php include("menu_topo.php"); ?>
@@ -49,7 +72,11 @@ mysqli_close();
     <form method="post"  action="../DAO/CadastroItemPedidoDB.php">
     <fieldset>
     <legend>Cadastro</legend>
+<<<<<<< HEAD
+    <input type="hidden" name="ID_PEDIDO" required="required" value="<?php echo $ID_PEDIDO; ?>">
+=======
     <input type="hidden" name="ID_PEDIDO" value="<?php echo $ID_PEDIDO; ?>">
+>>>>>>> 73a74eef9677186827527c4d55369ddb5c0e090c
     </br>
     <label>Tipo Material: </label>
      <select name="ID_TIPOMATERIAL">
@@ -65,6 +92,18 @@ mysqli_close();
 
     </br>
     <label>Sequencia Pedido:</label>
+<<<<<<< HEAD
+    <input  class="form-control input-sm" onkeyup="somenteNumeros(this);" type="text" name="SQ_PEDIDO" required="required" ng-model="numero.valor">
+    </br>
+    <label>Nome Produto:</label>
+    <input class="form-control input-sm" onkeyup="somenteNomes(this);" type="text" name="DS_ITEM" required="required" ng-model="nome.valor">
+    </br>
+    <label>Quantidade:</label>
+    <input  class="form-control input-sm" onkeyup="somenteNumeros(this);" type="text" name="VL_QUANTIDADE" required="required" ng-model="numero.valor">
+    </br>
+    <label>Cor:</label>
+    <input type="text" name="DS_COR" required="required">
+=======
     <input type="text" name="SQ_PEDIDO">
     </br>
     <label>Nome Produto:</label>
@@ -75,6 +114,7 @@ mysqli_close();
     </br>
     <label>Cor:</label>
     <input type="text" name="DS_COR">
+>>>>>>> 73a74eef9677186827527c4d55369ddb5c0e090c
     </br>
     
     <button class="btn btn-success">Salvar</button>

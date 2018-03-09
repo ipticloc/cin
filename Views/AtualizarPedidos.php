@@ -26,6 +26,47 @@ $todosclientes = $banco->executeQuery($sql);
      <link rel="stylesheet" type="text/css" href="style.css">
    <link rel="stylesheet" type="text/css" href="../css/bootstrap-responsive.min.css">
   <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<<<<<<< HEAD
+<script>
+function formatar(mascara, documento){
+  var i = documento.value.length;
+  var saida = mascara.substring(0,1);
+  var texto = mascara.substring(i)
+  
+  if (texto.substring(0,1) != saida){
+            documento.value += texto.substring(0,1);
+  }
+  
+  
+}
+</script>
+
+<script src="../js/jquery.js" type="text/javascript"></script>
+        <script src="js/jquery.maskedinput.min.js" type="text/javascript"></script>
+        <script >
+            $(document).ready(function(){
+               $("#date").mask("99/99/9999");
+               $("#phone").mask("(99) 99999-9999");
+               $("#tin").mask("99-9999999");
+               $("#ssn").mask("999-99-9999");
+               $("#cnpj").mask("99.999.999/9999-99");
+               
+               $(".selecao").click(function(){
+                   var Campo= $(this).val();
+                   var inserirCampo= '<input type="text" id="'+Campo+'" name= "'+Campo+'">';
+                   $("#localCampo").html(inserirCampo);
+                   $("#cnpj").mask("99.999.999/9999-99");
+                   $("#cpf").mask("999.999.999-99");
+                   
+               })
+            
+});
+
+    </script>
+    
+  </script>
+=======
+>>>>>>> 73a74eef9677186827527c4d55369ddb5c0e090c
   <script type="text/javascript" scr="../js/bootstrap.min.js"></script>
   <style type="text/css">
       .a{
@@ -72,7 +113,11 @@ $todosclientes = $banco->executeQuery($sql);
     	
     </select>
     <label>Data do pedido:</label>
+<<<<<<< HEAD
+    <input id="date" type="text" name="DT_PEDIDO" required="required" value="<?php echo $DT_PEDIDO;?>" class="selecao">
+=======
     <input type="text" name="DT_PEDIDO" value="<?php echo $DT_PEDIDO;  ?>">
+>>>>>>> 73a74eef9677186827527c4d55369ddb5c0e090c
    <br>
      <button class="btn btn-success">Salvar</button>
       <a href="ListarPedidos.php" class="btn btn-info">Voltar</a>
