@@ -1,11 +1,13 @@
 
 <?php
+
 include '../Classes/ConexaoBanco.php';
 
 include '../Classes/Sessao_CIN.php';
 Sessao_CIN::ValidaSessao();
 
 $banco = new ConexaoBanco();
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -38,8 +40,6 @@ $banco = new ConexaoBanco();
           campo.value = "";
         }
     }
- </script>
-<script>
 function formatar(mascara, documento){
   var i = documento.value.length;
   var saida = mascara.substring(0,1);
@@ -52,29 +52,32 @@ function formatar(mascara, documento){
   
 }
 </script>
+
+
 <script src="../js/jquery.js" type="text/javascript"></script>
-        <script src="js/jquery.maskedinput.min.js" type="text/javascript"></script>
-        <script>
+        <script src="../js/jquery.maskedinput.js" type="text/javascript"></script>
+        <script >
             $(document).ready(function(){
                $("#date").mask("99/99/9999");
                $("#phone").mask("(99) 99999-9999");
                $("#tin").mask("99-9999999");
                $("#ssn").mask("999-99-9999");
                $("#cnpj").mask("99.999.999/9999-99");
-               $("#cpf").mask("999.999.999-99");
-               
+              
                $(".selecao").click(function(){
                    var Campo= $(this).val();
                    var inserirCampo= '<input type="text" id="'+Campo+'" name= "'+Campo+'">';
                    $("#localCampo").html(inserirCampo);
                    $("#cnpj").mask("99.999.999/9999-99");
                    $("#cpf").mask("999.999.999-99");
+
                    
                })
             
 });
 
     </script>
+
 <script type="text/javascript">
   function validar(dom,tipo){
   switch(tipo){
@@ -102,10 +105,8 @@ function formatar(mascara, documento){
           <div class="container">
 
 
-            <form method="post" action="../DAO/ValidarCPFDB.php" ">
-            <!-- action="../DAO/ValidarCPFDB.php" -->
-            <!-- action="../DAO/CadastroClientesDB.php" -->
 
+            <form method="post" action="../DAO/CadastroClientesDB.php" >
 
 <fieldset>
 <legend>Cadastro</legend>
@@ -114,13 +115,16 @@ function formatar(mascara, documento){
     <input type="text" name="NM_CLIENTE" required="required" placeholder="Nome" >
     <br>
 
+
     CNPJ: <input  selected ="selected" type="radio" required="required" name="DS_CPF_CNPJ" value="cnpj" class="selecao" checked >
     CPF: <input selected ="selected" type="radio" required="required" name="DS_CPF_CNPJ" value="cpf" onkeyup="somenteNumeros(this);" type="text"  ng-model="numero.valor" >
+
     <span class="c"> *</span>
 
     </br>
       
       <div id="localCampo">
+
           <input class="form-control input-sm" id="cnpj" type="text" name="DS_CPF_CNPJ" required="required" ng-model="numero.valor" class="selecao">
 
       </div> 
@@ -130,10 +134,12 @@ function formatar(mascara, documento){
 
     <label>Telefone<span class="c"> *</span></label>
      <input id="phone" type="tel" name="NR_TELEFONE" maxlength="12" onkeyup="validar(this,'num');" required="required" placeholder="Telefone" class="selecao">
+
      <br>
    
    
     <label>E-mail <span class="c"> *</span></label>
+
     <input type="email" name="DS_EMAIL" required="required" placeholder="E-mail">
     <div>
       <button class="btn btn-success">Salvar</button>
@@ -153,5 +159,6 @@ function formatar(mascara, documento){
       </footer>
 
     </div><!--/.fluid-container-->
+
 </body>
 </html>

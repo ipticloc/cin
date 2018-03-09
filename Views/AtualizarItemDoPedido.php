@@ -64,7 +64,11 @@ $todosmateriais = $banco->executeQuery($sql);
     <input type="hidden" name="ID_PEDIDO" value="<?php echo $ID_PEDIDO; ?>">
      <input type="hidden" name="SQ_PEDIDO" value="<?php echo $SQ_PEDIDO; ?>">
     </br>
+<<<<<<< HEAD
     <label>Tipo Material:</label>
+=======
+    <label>Tipo Material: </label>
+>>>>>>> 73a74eef9677186827527c4d55369ddb5c0e090c
      <select name="ID_TIPOMATERIAL">
             <?php
 
@@ -82,6 +86,7 @@ $todosmateriais = $banco->executeQuery($sql);
 
     </br>
     <label>Descrição:</label>
+<<<<<<< HEAD
     <input type="text" name="DS_ITEM" required="required" value="<?php echo $DS_ITEM;  ?>">
     </br>
     <label>Quantidade:</label>
@@ -89,6 +94,15 @@ $todosmateriais = $banco->executeQuery($sql);
     </br>
     <label>cor:</label>
     <input type="text" name="DS_COR" required="required" value="<?php echo $DS_COR;  ?>">
+=======
+    <input type="text" name="DS_ITEM" value="<?php echo $DS_ITEM;  ?>">
+    </br>
+    <label>Quantidade:</label>
+    <input type="text" name="VL_QUANTIDADE" value="<?php echo $VL_QUANTIDADE;  ?>">
+    </br>
+    <label>cor:</label>
+    <input type="text" name="DS_COR" value="<?php echo $DS_COR;  ?>">
+>>>>>>> 73a74eef9677186827527c4d55369ddb5c0e090c
     </br>
     <label>Corte:</label>
     <?php

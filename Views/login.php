@@ -68,7 +68,11 @@
 
       <form method="post" class="form-signin" action="logindb.php">
         <h1 class="form-signin-heading">Login</h1>
+<<<<<<< HEAD
         <input type="text" class="input-block-level" name="Email" placeholder="Email">
+=======
+        <input type="email" class="input-block-level" name="Email" placeholder="Email" >
+>>>>>>> 73a74eef9677186827527c4d55369ddb5c0e090c
         <input type="password" class="input-block-level" name= "Senha" placeholder="Senha">
         <button class="btn  btn-primary" type="submit">Login</button>
       </form>

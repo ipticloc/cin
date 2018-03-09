@@ -15,6 +15,7 @@ Sessao_CIN::ValidaSessao();
   <link rel="stylesheet" type="text/css" href="../css/bootstrap-responsive.min.css">
   <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
   <script type="text/javascript" scr="../js/bootstrap.min.js"></script>
+<<<<<<< HEAD
   <script>
     function somenteNomes(num) {
         var er = /[^a-z.]/;
@@ -25,6 +26,8 @@ Sessao_CIN::ValidaSessao();
         }
     }
  </script>
+=======
+>>>>>>> 73a74eef9677186827527c4d55369ddb5c0e090c
   <style type="text/css">
     .a{
       font-size: 70px;
@@ -50,7 +53,11 @@ Sessao_CIN::ValidaSessao();
 <div>
       <label>Descrição</label>
       <input type="hidden" name="codigo" value="<?php echo $codigo?>"/>
+<<<<<<< HEAD
       <input class="form-control input-sm" name="descricao" required="required"onkeyup="somenteNomes(this);" type="text"  value="<?php echo $nome?>" ng-model="nomes.valor" />
+=======
+      <input type="text" name="descricao" required="required" value="<?php echo $nome?>"/>
+>>>>>>> 73a74eef9677186827527c4d55369ddb5c0e090c
    </div> 
 <br>
     <div>

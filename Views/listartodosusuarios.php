@@ -30,6 +30,7 @@ $todosusuarios = $banco->executeQuery($sql);
 	<title>Usuários</title>
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap-responsive.min.css">
   <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<<<<<<< HEAD
   <script type="text/javascript" scr="../js/bootstrap.min.js">
   </script>
   <script>
@@ -42,6 +43,9 @@ $todosusuarios = $banco->executeQuery($sql);
         }
     }
  </script>
+=======
+  <script type="text/javascript" scr="../js/bootstrap.min.js"></script>
+>>>>>>> 73a74eef9677186827527c4d55369ddb5c0e090c
   <style type="text/css">
     .a{
       font-size: 70px;
@@ -72,10 +76,16 @@ $todosusuarios = $banco->executeQuery($sql);
         <label>Pesquisa : </label>
         <form class="form-inline">
           <label>ID</label>
+<<<<<<< HEAD
           <input class="form-control input-sm" name="PesquisaID_USUARIO" required="required" onkeyup="somenteNumeros(this);" type="text"  ng-model="numero.valor" placeholder="Ex: 321" />
          
           <label>EMAIL</label>
           <input type="email" name="PesquisaDS_EMAIL" required="required" placeholder="Ex: @gmail">
+=======
+          <input type="text" name="PesquisaID_USUARIO" placeholder="Ex: 231">
+          <label>EMAIL</label>
+          <input type="text" name="PesquisaDS_EMAIL" placeholder="Ex: @gmail">
+>>>>>>> 73a74eef9677186827527c4d55369ddb5c0e090c
           <input class="btn btn-info" type="submit" value="Pesquisar">
         </form>
 
