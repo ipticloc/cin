@@ -2,7 +2,6 @@
 include '../Classes/ConexaoBanco.php';
 include '../Classes/Sessao_CIN.php';
 
-
 $senha = $_POST['Senha'];
 $email = $_POST['Email'];
 $codificada = md5($senha);
