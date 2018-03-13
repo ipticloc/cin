@@ -32,7 +32,6 @@ mysqli_close($conexao);
    <link rel="stylesheet" type="text/css" href=".../css/bootstrap-responsive.min.css">
   <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
   <script type="text/javascript" scr="../js/bootstrap.min.js"></script>
-<<<<<<< HEAD
   <script>
     function somenteNumeros(num) {
         var er = /[^0-9.]/;
@@ -42,8 +41,6 @@ mysqli_close($conexao);
           campo.value = "";
         }
     }
- </script>
- <script>
     function somenteNomes(num) {
         var er = /[^a-z.]/;
         er.lastIndex = 0;
@@ -53,8 +50,6 @@ mysqli_close($conexao);
         }
     }
  </script>
-=======
->>>>>>> 73a74eef9677186827527c4d55369ddb5c0e090c
   <style type="text/css">
       .a{
             font-size: 70px;
@@ -79,11 +74,7 @@ mysqli_close($conexao);
    <form method="post">
      <fieldset>
       <div align="left" class="control-group">
-<<<<<<< HEAD
     <a class="btn btn-primary" href="../Views/CadastroPedidos.php">Novo</a>
-=======
-    <a class="btn btn-primary" href="../DAO/CadastroPedidos.php">Novo</a>
->>>>>>> 73a74eef9677186827527c4d55369ddb5c0e090c
     <br>
     <br>
     </form>
@@ -92,15 +83,9 @@ mysqli_close($conexao);
         <label>Pesquisa : </label>
         <form class="form-inline">
           <label>ID</label>
-<<<<<<< HEAD
           <input class="form-control input-sm" name="PesquisaIdPedido" required="required" onkeyup="somenteNumeros(this);" type="text"  ng-model="numero.valor" placeholder="Ex: 321" />
           <label>NOME CLIENTE</label>
            <input class="form-control input-sm" name="PesquisaNmCliente" required="required" onkeyup="somenteNomes(this);" type="text"  ng-model="nomes.valor" placeholder="Ex:Multiserv" />
-=======
-          <input type="text" name="PesquisaIdPedido" placeholder="Ex: 231">
-          <label>NOME CLIENTE</label>
-          <input type="text" name="PesquisaNmCliente" placeholder="Ex: Multiserv">
->>>>>>> 73a74eef9677186827527c4d55369ddb5c0e090c
           <input class="btn btn-info" type="submit" value="Pesquisar">
         </form>
 

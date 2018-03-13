@@ -77,7 +77,6 @@ $todosusuarios = $banco->executeQuery($sql);
          
           <label>EMAIL</label>
           <input type="email" name="PesquisaDS_EMAIL" required="required" placeholder="Ex: @gmail">
-          <input type="text" name="PesquisaID_USUARIO" placeholder="Ex: 231">
           <input class="btn btn-info" type="submit" value="Pesquisar">
         </form>
 

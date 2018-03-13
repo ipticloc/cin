@@ -65,8 +65,6 @@ function formatar(mascara, documento){
     </script>
     
   </script>
-=======
->>>>>>> 73a74eef9677186827527c4d55369ddb5c0e090c
   <script type="text/javascript" scr="../js/bootstrap.min.js"></script>
   <style type="text/css">
       .a{
@@ -113,11 +111,7 @@ function formatar(mascara, documento){
     	
     </select>
     <label>Data do pedido:</label>
-<<<<<<< HEAD
     <input id="date" type="text" name="DT_PEDIDO" required="required" value="<?php echo $DT_PEDIDO;?>" class="selecao">
-=======
-    <input type="text" name="DT_PEDIDO" value="<?php echo $DT_PEDIDO;  ?>">
->>>>>>> 73a74eef9677186827527c4d55369ddb5c0e090c
    <br>
      <button class="btn btn-success">Salvar</button>
       <a href="ListarPedidos.php" class="btn btn-info">Voltar</a>
