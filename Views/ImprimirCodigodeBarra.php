@@ -13,7 +13,7 @@
 		}
 	</style>
 </head>
-<body>
+<body>s
 <?php
 $cb = $_GET['ID_ITENSPEDIDO']; // variavel do codigo de barras
 	

@@ -18,8 +18,10 @@ if($PesquisaId != ""){
 
     $sql = "SELECT * FROM ItensPedido WHERE ID_ITENSPEDIDO='".$PesquisaId."'";
     $TodosItensDoPedido = $banco->executeQuery($sql);
+    $TodosItensDoPedido = mysqli_query($conexao,$sql);
+    //print_r($TodosItensDoPedido);
 
-function geraCodigoBarra($numero){
+<!--function geraCodigoBarra($numero){
     $fino = 2.5;
     $largo = 13;
     $altura = 50;
@@ -46,10 +48,10 @@ function geraCodigoBarra($numero){
       }
     }
     
-    echo '<img src="../imagens/p.gif" width="'.$fino.'" height="'.$altura.'" border="0" />';
-    echo '<img src="../imagens/b.gif" width="'.$fino.'" height="'.$altura.'" border="0" />';
-    echo '<img src="../imagens/p.gif" width="'.$fino.'" height="'.$altura.'" border="0" />';
-    echo '<img src="../imagens/b.gif" width="'.$fino.'" height="'.$altura.'" border="0" />';
+    echo '<img src="../im/p.gif" width="'.$fino.'" height="'.$altura.'" border="0" />';
+    echo '<img src="../im/b.gif" width="'.$fino.'" height="'.$altura.'" border="0" />';
+    echo '<img src="../im/p.gif" width="'.$fino.'" height="'.$altura.'" border="0" />';
+    echo '<img src="../im/b.gif" width="'.$fino.'" height="'.$altura.'" border="0" />';
     
     echo '<img ';
     
@@ -92,12 +94,11 @@ function geraCodigoBarra($numero){
     echo '<img src="../imagens/p.gif" width="1" height="'.$altura.'" border="0" />';
   }
 
+
+
 }
 
 
-
-//$TodosItensDoPedido = mysqli_query($conexao,$sql);
-//print_r($TodosItensDoPedido);
 //exit();
 //mysqli_close($conexao);
 
