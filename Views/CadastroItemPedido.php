@@ -33,7 +33,6 @@ mysqli_close();
       width: 35%;
         }
   </style>
-<<<<<<< HEAD
   <script>
     function somenteNumeros(num) {
         var er = /[^0-9.]/;
@@ -54,8 +53,6 @@ mysqli_close();
         }
     }
  </script>
-=======
->>>>>>> 73a74eef9677186827527c4d55369ddb5c0e090c
 </head>
 <body>
  <?php include("menu_topo.php"); ?>
@@ -72,11 +69,7 @@ mysqli_close();
     <form method="post"  action="../DAO/CadastroItemPedidoDB.php">
     <fieldset>
     <legend>Cadastro</legend>
-<<<<<<< HEAD
     <input type="hidden" name="ID_PEDIDO" required="required" value="<?php echo $ID_PEDIDO; ?>">
-=======
-    <input type="hidden" name="ID_PEDIDO" value="<?php echo $ID_PEDIDO; ?>">
->>>>>>> 73a74eef9677186827527c4d55369ddb5c0e090c
     </br>
     <label>Tipo Material: </label>
      <select name="ID_TIPOMATERIAL">
@@ -92,7 +85,6 @@ mysqli_close();
 
     </br>
     <label>Sequencia Pedido:</label>
-<<<<<<< HEAD
     <input  class="form-control input-sm" onkeyup="somenteNumeros(this);" type="text" name="SQ_PEDIDO" required="required" ng-model="numero.valor">
     </br>
     <label>Nome Produto:</label>
@@ -103,20 +95,8 @@ mysqli_close();
     </br>
     <label>Cor:</label>
     <input type="text" name="DS_COR" required="required">
-=======
     <input type="text" name="SQ_PEDIDO">
     </br>
-    <label>Nome Produto:</label>
-    <input type="text" name="DS_ITEM">
-    </br>
-    <label>Quantidade:</label>
-    <input type="text" name="VL_QUANTIDADE">
-    </br>
-    <label>Cor:</label>
-    <input type="text" name="DS_COR">
->>>>>>> 73a74eef9677186827527c4d55369ddb5c0e090c
-    </br>
-    
     <button class="btn btn-success">Salvar</button>
     <a class="btn btn-primary"  href="ListarItensDoPedido.php?ID_PEDIDO=<?php echo $ID_PEDIDO;?>">Voltar</a>
     </fieldset>

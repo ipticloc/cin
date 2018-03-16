@@ -13,7 +13,6 @@ Sessao_CIN::ValidaSessao();
 <html>
 <head>
 <meta charset="utf-8">
-<<<<<<< HEAD
 	             <title>Atualizar Clientes</title>
 <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" type="text/css" href="../css/bootstrap-responsive.min.css">
@@ -64,8 +63,7 @@ function formatar(mascara, documento){
           campo.value = "";
         }
     }
- </script>
-  <script>
+ 
     function somenteNomes(num) {
         var er = /[^a-z.]/;
         er.lastIndex = 0;
@@ -75,7 +73,6 @@ function formatar(mascara, documento){
         }
     }
  </script>
-=======
 	<title>Atualizar Clientes</title>
 
 
@@ -88,7 +85,7 @@ function formatar(mascara, documento){
 
   <script type="text/javascript" scr="../js/bootstrap.min.js">
   </script>
->>>>>>> 73a74eef9677186827527c4d55369ddb5c0e090c
+
 
   <style type="text/css">
     .a{
@@ -117,7 +114,7 @@ function formatar(mascara, documento){
 
     <label>Nome do Cliente</label>
     <input type="hidden" name="codigo" value="<?php echo $codigo;?>"/>
-<<<<<<< HEAD
+
      <input class="form-control input-sm" name="NM_CLIENTE" onkeyup="somenteNomes(this);" type="text"  ng-model="nomes.valor" required="required" placeholder="diga o nome..." value="<?php echo $nome;?>"  />
     <br>
     <label>cpf ou cnpj</label>
@@ -129,28 +126,17 @@ function formatar(mascara, documento){
           <input type="number" name="DS_CPF_CNPJ" required="required" class="selecao">
 
       </div> 
-=======
     <input type="text" name="NM_CLIENTE" required="required" placeholder="diga o nome..." value="<?php echo $nome;?>"/>
-    <br>
-      <label>Cpf ou Cnpj</label>
-    <input type="text" name="DS_CPF_CNPJ" required="required" placeholder="Diga o cnpj" value="<?php echo $cpf;?>"/>
->>>>>>> 73a74eef9677186827527c4d55369ddb5c0e090c
     <br>
     <label>Endereço</label>
     <input type="text" name="DS_ENDEREÇO" required="required" placeholder="Diga o Endereço" value="<?php echo $endereço;?>"/>
     <br>
     <label>Telefone</label>
-<<<<<<< HEAD
     <input id="phone" class="form-control input-sm" type="tel" name="NR_TELEFONE" required="required" placeholder="Diga o Telefone" ng-model="numero.valor" value="<?php echo $telefone;?>"/>
     <br>
     <label>E-mail</label>
     <input type="email" name="DS_EMAIL" required="required" placeholder="Diga o Email" value="<?php echo $email;?>"/>
-=======
     <input type="tel" name="NR_TELEFONE" required="required" placeholder="Diga o Telefone" value="<?php echo $telefone;?>"/>
-    <br>
-    <label>Email</label>
-    <input type="text" name="DS_EMAIL" required="required" placeholder="Diga o Email" value="<?php echo $email;?>"/>
->>>>>>> 73a74eef9677186827527c4d55369ddb5c0e090c
     <br>
       <button class="btn btn-success">Salvar</button>
       <a href="listarclientes.php" class="btn btn-info">Voltar</a>
