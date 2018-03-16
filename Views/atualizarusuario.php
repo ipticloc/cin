@@ -53,7 +53,6 @@ Sessao_CIN::ValidaSessao();
       <label>Nome</label>
       <input type="hidden" name="codigo" value="<?php echo $codigo?>"/>
        <input class="form-control input-sm" placeholder="Diga o Nome" onkeyup="somenteNomes(this);" type="text" ng-model="nomes.valor" required="required" value="<?php echo $nome?>"/>
-      
        <label>e-mail</label>
       <input type="email" required="required" placeholder="Diga o Email" name="email" value="<?php echo $email?>"/>
 <br>

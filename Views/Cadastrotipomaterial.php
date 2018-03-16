@@ -55,7 +55,10 @@ Sessao_CIN::ValidaSessao();
                   <legend>Cadastro</legend>
                   <label>Descrição</label>
       <input id="desc" class="form-control input-sm" type="text" name="descricao" required="required"onkeyup="somenteNomes(this);" type="text"  ng-model="nomes.valor" placeholder="Digite algo....">
+<<<<<<< HEAD
 <br>
+=======
+>>>>>>> 53810d762856bd76d2fc35ff35d7cce486f3b822
 <br>
                  <button class="btn btn-success">Salvar</button>
       <a href="listartudo.php" class="btn btn-info">Voltar</a>

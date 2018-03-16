@@ -49,7 +49,6 @@ Sessao_CIN::ValidaSessao();
      <label>Data Pedido:</label>
      <strong><?php echo $DT_PEDIDO; ?></strong>
       <input type="hidden" name="ID_PEDIDO" required="required"  value="<?php echo $ID_PEDIDO;  ?>">
-   
     <br/>
     <button class=\"btn btn-mini btn-danger\" type="submit" >Excluir</button>
     <input class=\"btn btn-mini btn-danger\" type="submit" value="Excluir">

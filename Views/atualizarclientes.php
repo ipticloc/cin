@@ -26,9 +26,7 @@ function formatar(mascara, documento){
   
   if (texto.substring(0,1) != saida){
             documento.value += texto.substring(0,1);
-  }
-  
-  
+  } 
 }
 </script>
 
@@ -85,8 +83,6 @@ function formatar(mascara, documento){
 
   <script type="text/javascript" scr="../js/bootstrap.min.js">
   </script>
-
-
   <style type="text/css">
     .a{
       font-size: 70px;
@@ -114,12 +110,11 @@ function formatar(mascara, documento){
 
     <label>Nome do Cliente</label>
     <input type="hidden" name="codigo" value="<?php echo $codigo;?>"/>
-
      <input class="form-control input-sm" name="NM_CLIENTE" onkeyup="somenteNomes(this);" type="text"  ng-model="nomes.valor" required="required" placeholder="diga o nome..." value="<?php echo $nome;?>"  />
     <br>
     <label>cpf ou cnpj</label>
      <input type="radio" selected ="selected" name="DS_CPF_CNPJ" required="required" placeholder="Diga o cnpj" checked  />
-     <inputtype="radio" selected ="selected" name="DS_CPF_CNPJ" required="required" placeholder="Diga o cpf" />
+     <input type="radio" selected ="selected" name="DS_CPF_CNPJ" required="required" placeholder="Diga o cpf" />
     </br>
       
       <div id="localCampo">

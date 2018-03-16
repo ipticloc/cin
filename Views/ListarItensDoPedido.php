@@ -116,9 +116,7 @@ $TodosItensDoPedido = $banco->executeQuery($sql);
                 if($linha[SL_CORTE] == 3){
                   echo"<td style=\"text-align:center\"><div class=\"concluido\"></div></td>";
                 }
-
-
-
+                
                 if($linha[ST_ETIQUETA] == 1){
                   echo"<td style=\"text-align:center\"><div class=\"parado\"></div></td>";
                   }
@@ -162,13 +160,6 @@ $TodosItensDoPedido = $banco->executeQuery($sql);
                 if($linha[DS_PREPARACAO] == 3){
                   echo"<td style=\"text-align:center\"><div class=\"concluido\"></div></td>";
                 }
-
-
-
-
-
-
-
                 echo"
                 <td style=\"text-align:center\">$linha[DS_TIPOMATERIAL]</td>
                 <td align=\"center\">

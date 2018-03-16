@@ -50,7 +50,6 @@ mysqli_close($conexao);
         }
     }
  </script>
-
   <style type="text/css">
       .a{
             font-size: 70px;
@@ -77,7 +76,8 @@ mysqli_close($conexao);
       <div align="left" class="control-group">
 
     <a class="btn btn-primary" href="../Views/CadastroPedidos.php">Novo</a>
-    <br>
+    <a class="btn btn-primary" href="../Views/CadastroPedidos.php">Novo</a>
+    <br> 
     </form>
 
     <div class="container">
@@ -86,8 +86,9 @@ mysqli_close($conexao);
           <label>ID</label>
           <input class="form-control input-sm" name="PesquisaIdPedido" required="required" onkeyup="somenteNumeros(this);" type="text"  ng-model="numero.valor" placeholder="Ex: 321" />
           <label>NOME CLIENTE</label>
-           <input class="form-control input-sm" name="PesquisaNmCliente" required="required" onkeyup="somenteNomes(this);" type="text"  ng-model="nomes.valor" placeholder="Ex:Multiserv" />
+           <input class="form-control input-sm" name="PesquisaNmCliente" required="required" onkeyup="somenteNomes(this);" type="text"  ng-model="nomes.valor" placeholder="Ex:Multiserv" /> 
                      <input class="btn btn-info" type="submit" value="Pesquisar">
+          <input class="btn btn-info" type="submit" value="Pesquisar">
         </form>
 
     </div>

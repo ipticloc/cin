@@ -55,7 +55,6 @@ $todosmaterias = $banco->executeQuery($sql);
         }
     }
  </script>
-
 </head>
 <body>
    <?php include("menu_topo.php"); ?>

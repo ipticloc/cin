@@ -42,8 +42,6 @@ mysqli_close();
           campo.value = "";
         }
     }
- </script>
-  <script>
     function somenteNomes(num) {
         var er = /[^a-z.]/;
         er.lastIndex = 0;
@@ -97,6 +95,10 @@ mysqli_close();
     <input type="text" name="DS_COR" required="required">
     <input type="text" name="SQ_PEDIDO">
     </br>
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 53810d762856bd76d2fc35ff35d7cce486f3b822
     <button class="btn btn-success">Salvar</button>
     <a class="btn btn-primary"  href="ListarItensDoPedido.php?ID_PEDIDO=<?php echo $ID_PEDIDO;?>">Voltar</a>
     </fieldset>

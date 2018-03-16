@@ -41,8 +41,9 @@ $todosusuarios = $banco->executeQuery($sql);
           campo.value = "";
         }
     }
- </script>
+ </script> 
   <script type="text/javascript" scr="../js/bootstrap.min.js"></script>
+ 
   <style type="text/css">
     .a{
       font-size: 70px;
