@@ -61,18 +61,20 @@ function formatar(mascara, documento){
                $("#date").mask("99/99/9999");
                $("#phone").mask("(99) 99999-9999");
                $("#tin").mask("99-9999999");
-               $("#ssn").mask("999-99-9999");
+               $("#ssn").mask("999-99-9999");               
+               $("#cpf").mask("999.999.999-99");
                $("#cnpj").mask("99.999.999/9999-99");
+
               
                $(".selecao").click(function(){
-                   var Campo= $(this).val();
+                   var Campo= $(this).val();                  
                    var inserirCampo= '<input type="text" id="'+Campo+'" name= "'+Campo+'">';
                    $("#localCampo").html(inserirCampo);
                    $("#cnpj").mask("99.999.999/9999-99");
                    $("#cpf").mask("999.999.999-99");
 
                    
-               })
+               })               
             
 });
 
@@ -114,10 +116,8 @@ function formatar(mascara, documento){
     <label>Nome do Cliente<span class="c"> *</span></label>
     <input type="text" name="NM_CLIENTE" required="required" placeholder="Nome" >
     <br>
-
-
     CNPJ: <input  selected ="selected" type="radio" required="required" name="DS_CPF_CNPJ" value="cnpj" class="selecao" checked >
-    CPF: <input selected ="selected" type="radio" required="required" name="DS_CPF_CNPJ" value="cpf" onkeyup="somenteNumeros(this);" type="text"  ng-model="numero.valor" >
+    CPF: <input selected ="selected" type="radio" required="required" name="DS_CPF_CNPJ" value="cpf" class="selecao" onkeyup="somenteNumeros(this);" type="text"  ng-model="numero.valor" >
 
     <span class="c"> *</span>
 
@@ -146,6 +146,8 @@ function formatar(mascara, documento){
       <a href="listarclientes.php" class="btn btn-info">Voltar</a>
     </div>
     </div>
+    </fieldset>
+    </fieldset>
   </fieldset>
   </form>
              </div>

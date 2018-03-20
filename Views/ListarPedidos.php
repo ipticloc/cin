@@ -69,18 +69,16 @@ mysqli_close($conexao);
         <h1 align="center">Pedidos</h1>
         </div>
 
-        
-
-   <form method="post">
+        +<form method="post">
      <fieldset>
       <div align="left" class="control-group">
-
-    <a class="btn btn-primary" href="../Views/CadastroPedidos.php">Novo</a>
-    <a class="btn btn-primary" href="../Views/CadastroPedidos.php">Novo</a>
+      <a class="btn btn-primary" href="../Views/CadastroPedidos.php">Novo</a>
     <br> 
     </form>
 
     <div class="container">
+    <br>
+
         <label>Pesquisa : </label>
         <form class="form-inline">
           <label>ID</label>
@@ -88,7 +86,6 @@ mysqli_close($conexao);
           <label>NOME CLIENTE</label>
            <input class="form-control input-sm" name="PesquisaNmCliente" required="required" onkeyup="somenteNomes(this);" type="text"  ng-model="nomes.valor" placeholder="Ex:Multiserv" /> 
                      <input class="btn btn-info" type="submit" value="Pesquisar">
-          <input class="btn btn-info" type="submit" value="Pesquisar">
         </form>
 
     </div>

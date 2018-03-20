@@ -78,7 +78,6 @@ $todosmaterias = $banco->executeQuery($sql);
           <input class="form-control input-sm" name="PesquisaID_TIPOMATERIAL" required="required" onkeyup="somenteNumeros(this);" type="text"  ng-model="numero.valor" placeholder="Ex: 321" />
           <label>TIPO DO MATERIAL</label>
          <input class="form-control input-sm" name="PesquisaDS_TIPOMATERIAL" required="required" onkeyup="somenteNomes(this);" type="text"  ng-model="nomes.valor" placeholder="Ex:Algodão" />
-          <input type="text" name="PesquisaID_TIPOMATERIAL" placeholder="Ex: 231">
           <input class="btn btn-info" type="submit" value="Pesquisar">
         </form>
 

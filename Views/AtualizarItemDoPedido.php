@@ -94,11 +94,8 @@ $todosmateriais = $banco->executeQuery($sql);
     </br>
     <label>cor:</label>
     <input type="text" name="DS_COR" required="required" value="<?php echo $DS_COR;  ?>">
-<<<<<<< HEAD
+    
     <input type="text" name="DS_ITEM" value="<?php echo $DS_ITEM;  ?>"> 
-=======
-    <input type="text" name="DS_ITEM" value="<?php echo $DS_ITEM;  ?>">
->>>>>>> 53810d762856bd76d2fc35ff35d7cce486f3b822
     </br>
     <label>Corte:</label>
     <?php

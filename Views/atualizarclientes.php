@@ -112,17 +112,18 @@ function formatar(mascara, documento){
     <input type="hidden" name="codigo" value="<?php echo $codigo;?>"/>
      <input class="form-control input-sm" name="NM_CLIENTE" onkeyup="somenteNomes(this);" type="text"  ng-model="nomes.valor" required="required" placeholder="diga o nome..." value="<?php echo $nome;?>"  />
     <br>
-    <label>cpf ou cnpj</label>
-     <input type="radio" selected ="selected" name="DS_CPF_CNPJ" required="required" placeholder="Diga o cnpj" checked  />
-     <input type="radio" selected ="selected" name="DS_CPF_CNPJ" required="required" placeholder="Diga o cpf" />
+    CNPJ: <input  selected ="selected" type="radio" required="required" name="DS_CPF_CNPJ" value="cnpj" class="selecao" checked >
+    CPF: <input selected ="selected" type="radio" required="required" name="DS_CPF_CNPJ" value="cpf" class="selecao" onkeyup="somenteNumeros(this);" type="text"  ng-model="numero.valor" >
+
+    <span class="c"> *</span>
+
     </br>
       
       <div id="localCampo">
-          <input type="number" name="DS_CPF_CNPJ" required="required" class="selecao">
 
+          <input class="form-control input-sm" id="cnpj" type="text" name="DS_CPF_CNPJ" required="required" ng-model="numero.valor" class="selecao">
       </div> 
-    <input type="text" name="NM_CLIENTE" required="required" placeholder="diga o nome..." value="<?php echo $nome;?>"/>
-    <br>
+  
     <label>Endereço</label>
     <input type="text" name="DS_ENDEREÇO" required="required" placeholder="Diga o Endereço" value="<?php echo $endereço;?>"/>
     <br>
@@ -131,7 +132,6 @@ function formatar(mascara, documento){
     <br>
     <label>E-mail</label>
     <input type="email" name="DS_EMAIL" required="required" placeholder="Diga o Email" value="<?php echo $email;?>"/>
-    <input type="tel" name="NR_TELEFONE" required="required" placeholder="Diga o Telefone" value="<?php echo $telefone;?>"/>
     <br>
       <button class="btn btn-success">Salvar</button>
       <a href="listarclientes.php" class="btn btn-info">Voltar</a>
