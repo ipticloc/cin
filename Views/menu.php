@@ -15,17 +15,7 @@ else{
    <link rel="stylesheet" type="text/css" href="../css/bootstrap-responsive.min.css">
   <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
   <script type="text/javascript" scr="../js/bootstrap.min.js"></script>
-	<style type="text/css">
-		.a{
-			font-size: 70px;
-      height: 10%;
-      width: 35%;
-		}
-		.b{
-			font-size: 40px;
-			width: 20%;
-		}
-	</style>
+<link rel="stylesheet" type="text/css" href="../css/editavel.css">
 </head>
 <body>
 <div class="navbar navbar-inverse navbar-fixed-top">

@@ -109,140 +109,70 @@ function geraCodigoBarra($numero){
 
 <!DOCTYPE html>
 <html>
-
-<head>
-
-<meta charset="utf-8">
-<title>Pesquisar Codigo De Barra</title>
-<t <link rel="stylesheet" type="text/css" href="style.css">
-   <link rel="stylesheet" type="text/css" href="../css/bootstrap-responsive.min.css">
-  <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-  <script type="text/javascript" scr="../js/bootstrap.min.js"></script>
-  <style type="text/css">
-    .a{
-      font-size: 70px;
-      height: 10%;
-      width: 35%;
-    }
-    .parado{
-    
-    display: inline-block; 
-    border-radius: 50%; 
-    height: 10px; width: 10px; 
-    border: 1px solid #000000; 
-    background-color:#DD0000;
-  }
-
-  .executando{
-    
-    display: inline-block; 
-    border-radius: 50%; 
-    height: 10px; width: 10px;
-    border: 1px solid #000000; 
-    background-color: #FFFF00;
-
-  }
-  .concluido{
-    display: inline-block; 
-    border-radius: 50%; 
-    height: 10px; width: 10px; 
-    border: 1px solid #000000; 
-    background-color: #00DD00;
-    
-  }
-  .principal {
-  float: left;
-  background-color: red;
-}
-.direita{
-  float: right;
-  background-color:blue;
-}
-  </style>
-</head>
-
-
+  <head>
+    <meta charset="utf-8">
+    <title>Pesquisar Codigo De Barra</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <script type="text/javascript" scr="../js/bootstrap.min.js"></script>    
+    <link rel="stylesheet" type="text/css" href="../css/editavel.css">
+  </head>
 <body>
  <?php include("menu_topo.php"); ?>
-
     <div class="container-fluid">
-    <div class="row-fluid">
-    <?php include("menu_lateral.php"); ?>
+      <div class="row-fluid">
+      <?php include("menu_lateral.php"); ?>
         <div class="span9">
-        <div class="hero-unit">
-        <h1 align="center">Pesquisar Codigo De Barra</h1>
+          <div class="hero-unit">
+          <h1 align="center">Pesquisar Codigo De Barra</h1>
         </div>
-
-        
-
- 
-     <fieldset>
-      <div align="left" class="control-group">
-
-   
-    	
-    <br>
-    
-
-    <div class="container">
-        <label>Pesquisa : </label>
-
-        <form class="form-inline">
-          <label>ID</label>
-          <input type="text" name="PesquisaIdPedido" required="required" placeholder="Ex: 231">
-         
-          <input class="btn btn-info" type="submit" value="Pesquisar">
-        </form>
-
-    </div>
-    <br>
-     
-       <table style="width:90%;" class="table table-striped">
-     <tr>
-          <td>ID Pedido</td>
-          <td>Sequência do pedido</td>
-          <td>Quantidade de item</td>
-          <td>Nome do item</td>
-          <td>Cor</td>
-          <td>Data do cadastro</td>
-          <td>ID ITENS PEDIDO</td>
-
-          <td>Ações</td>
-         
-    
-         
-         
-     </tr>
-
-    <?php
-         while ($linha = mysqli_fetch_array($TodosItensDoPedido)) {
-
-           echo " <tr>
-                <td style=\"text-align:center\">$linha[ID_PEDIDO]</td>
-                <td style=\"text-align:center\">$linha[SQ_PEDIDO]</td>
-                <td style=\"text-align:center\">$linha[VL_QUANTIDADE]</td>
-                <td style=\"text-align:center\">$linha[DS_ITEM]</td> 
-                <td style=\"text-align:center\">$linha[DS_COR]</td>
-                <td style=\"text-align:center\">$linha[DT_CADASTRO]</td>
-                <td style=\"text-align:center\">$linha[ID_ITENSPEDIDO]</td>
-                <td align=\"center\"> 
-                   <a class=\"btn\" href=\"AtualizarItemDoPedido.php?SQ_PEDIDO=$linha[SQ_PEDIDO]&VL_QUANTIDADE=$linha[VL_QUANTIDADE]&DS_ITEM=$linha[DS_ITEM]&DS_COR=$linha[DS_COR]&DT_CADASTRO=$linha[DT_CADASTRO]&SL_CORTE=$linha[SL_CORTE]&ST_ETIQUETA=$linha[ST_ETIQUETA]&ST_SILK=$linha[ST_SILK]&ST_BORDADO=$linha[ST_BORDADO]&DS_PREPARACAO=$linha[DS_PREPARACAO]&ID_TIPOMATERIAL=$linha[ID_TIPOMATERIAL]&ID_PEDIDO=$linha[ID_PEDIDO]\">Editar</a> </td>";
-                   
-           echo ";</tr>";
-          
-
-    ?>
-   </table>
- <div class="row">
- 
-    <div class="span6">
-      <dl>
-
-
-		  <dt>Corte</dt>
-		 <dd>
-
-     <?php
+        <fieldset>
+          <div align="left" class="control-group">  	
+            <br>
+              <div class="container">
+                <label>Pesquisa : </label>
+                <form class="form-inline">
+                  <label>ID</label>
+                  <input type="text" name="PesquisaIdPedido" required="required" placeholder="Ex: 231">         
+                  <input class="btn btn-info" type="submit" value="Pesquisar">
+                </form>
+              </div>
+              <br>    
+              <table style="width:90%;" class="table table-striped">
+              <tr>
+                <td>ID Pedido</td>
+                <td>Sequência do pedido</td>
+                <td>Quantidade de item</td>
+                <td>Nome do item</td>
+                <td>Cor</td>
+                <td>Data do cadastro</td>
+                <td>ID ITENS PEDIDO</td>
+                <td>Ações</td>                           
+              </tr>
+            <?php
+              $sql = "SELECT * FROM ItensPedido WHERE ID_ITENSPEDIDO='".$PesquisaId."'";
+              $TodosItensDoPedido = $banco->executeQuery($sql);
+              while ($linha = mysqli_fetch_array($TodosItensDoPedido)) {
+                echo " <tr>
+                  <td style=\"text-align:center\">$linha[ID_PEDIDO]</td>
+                  <td style=\"text-align:center\">$linha[SQ_PEDIDO]</td>
+                  <td style=\"text-align:center\">$linha[VL_QUANTIDADE]</td>
+                  <td style=\"text-align:center\">$linha[DS_ITEM]</td> 
+                  <td style=\"text-align:center\">$linha[DS_COR]</td>
+                  <td style=\"text-align:center\">$linha[DT_CADASTRO]</td>
+                  <td style=\"text-align:center\">$linha[ID_ITENSPEDIDO]</td>
+                  <td align=\"center\"> 
+                  <a class=\"btn\" href=\"AtualizarItemDoPedido.php?SQ_PEDIDO=$linha[SQ_PEDIDO]&VL_QUANTIDADE=$linha[VL_QUANTIDADE]&DS_ITEM=$linha[DS_ITEM]&DS_COR=$linha[DS_COR]&DT_CADASTRO=$linha[DT_CADASTRO]&SL_CORTE=$linha[SL_CORTE]&ST_ETIQUETA=$linha[ST_ETIQUETA]&ST_SILK=$linha[ST_SILK]&ST_BORDADO=$linha[ST_BORDADO]&DS_PREPARACAO=$linha[DS_PREPARACAO]&ID_TIPOMATERIAL=$linha[ID_TIPOMATERIAL]&ID_PEDIDO=$linha[ID_PEDIDO]\">Editar</a> </td>";                    
+                echo ";</tr>";          
+            ?>
+            </table>
+            <div class="row"> 
+            <div class="span6">
+            <dl>
+		        <dt>Corte</dt>
+		        <dd>
+            <?php
 if($linha[SL_CORTE] == 1){
                   echo"<td style=\"text-align:center\"><div class=\"parado\"></div></td>";
                   }

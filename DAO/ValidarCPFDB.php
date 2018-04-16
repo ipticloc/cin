@@ -9,13 +9,10 @@ exit();
 $Cliente = $banco->executeQuery($sql);
 
 if ($Cliente->num_rows==1) {
-
 		header("location:../Views/CadastroCliente.php");
-
 }
 else
 {
     	header("location:CadastroClientesDB.php");
-	
 }
  ?>

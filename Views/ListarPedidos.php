@@ -21,7 +21,6 @@ else{
 
 $todospedidos = $banco->executeQuery($sql);
 
-mysqli_close($conexao);
 ?>
 <!DOCTYPE html>
 <html>
@@ -69,7 +68,7 @@ mysqli_close($conexao);
         <h1 align="center">Pedidos</h1>
         </div>
 
-        +<form method="post">
+        <form method="post">
      <fieldset>
       <div align="left" class="control-group">
       <a class="btn btn-primary" href="../Views/CadastroPedidos.php">Novo</a>

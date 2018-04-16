@@ -14,7 +14,7 @@ $DT_CADASTRO = $_POST['DT_CADASTRO'];
 $ID_TIPOMATERIAL = $_POST['ID_TIPOMATERIAL'];
 
 
-$sql = "INSERT INTO `ItensPedido`(
+$sql = "INSERT INTO `itenspedido`(
 `ID_PEDIDO`,
 `SQ_PEDIDO`,
 `DS_ITEM`,

@@ -16,17 +16,11 @@ $todosclientes = $banco->executeQuery($sql);
 <html>
 <head>
 	<title>Clientes</title>
-		<link rel="stylesheet" type="text/css" href="style.css">
-   <link rel="stylesheet" type="text/css" href="../css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap-responsive.min.css">
   <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
   <script type="text/javascript" scr="../js/bootstrap.min.js"></script>
-  <style type="text/css">
-    .a{
-      font-size: 70px;
-      height: 10%;
-      width: 35%;
-    }
-  </style>
+  <link rel="stylesheet" type="text/css" href="../css/editavel.css">
 </head>
 <body>
  <?php include("menu_topo.php"); ?>
@@ -60,12 +54,12 @@ $todosclientes = $banco->executeQuery($sql);
           <?php
             while ($linha = mysqli_fetch_array($todosclientes)) {
               echo "<tr>";
-                  echo "<td>".$linha[ID_CLIENTE]."</td>";
-                  echo "<td>".$linha[NM_CLIENTE]."</td>";
-                  echo "<td>".$linha[DS_CPF_CNPJ]."</td>";
-                  echo "<td>".$linha[DS_ENDEREÇO]."</td>";
-                  echo "<td>".$linha[NR_TELEFONE]."</td>";
-                  echo "<td>".$linha[DS_EMAIL]."</td>";
+                  echo "<td>".$linha['ID_CLIENTE']."</td>";
+                  echo "<td>".$linha['NM_CLIENTE']."</td>";
+                  echo "<td>".$linha['DS_CPF_CNPJ']."</td>";
+                  echo "<td>".$linha['DS_ENDEREÇO']."</td>";
+                  echo "<td>".$linha['NR_TELEFONE']."</td>";
+                  echo "<td>".$linha['DS_EMAIL']."</td>";
 
                   echo "<td><a class=\"btn btn-mini btn-warning\" href=\"atualizarclientes.php?ID_CLIENTE=$linha[ID_CLIENTE]&NM_CLIENTE=$linha[NM_CLIENTE]&DS_CPF_CNPJ=$linha[DS_CPF_CNPJ]&DS_ENDEREÇO=$linha[DS_ENDEREÇO]&NR_TELEFONE=$linha[NR_TELEFONE]&DS_EMAIL=$linha[DS_EMAIL]\">Editar</a>
                     &nbsp;&nbsp;&nbsp;

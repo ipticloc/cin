@@ -52,7 +52,7 @@ class ConexaoBanco
 		else
 		{
 			echo "Ocorreu um erro na execução da SQL";
-			echo "Erro :" . mysqli_error();
+			echo "Erro: " . mysqli_error();
 			echo "SQL: " . $query;
 			die();
 			disconnect();

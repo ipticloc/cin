@@ -107,57 +107,57 @@ $TodosItensDoPedido = $banco->executeQuery($sql);
                 <td style=\"text-align:center\">$linha[DT_CADASTRO]</td>";
 
 
-                if($linha[SL_CORTE] == 1){
+                if($linha['SL_CORTE'] == 1){
                   echo"<td style=\"text-align:center\"><div class=\"parado\"></div></td>";
                   }
-                if($linha[SL_CORTE] == 2){
+                if($linha['SL_CORTE'] == 2){
                   echo"<td style=\"text-align:center\"><div class=\"executando\"></div></td>";
                 }
-                if($linha[SL_CORTE] == 3){
+                if($linha['SL_CORTE'] == 3){
                   echo"<td style=\"text-align:center\"><div class=\"concluido\"></div></td>";
                 }
                 
-                if($linha[ST_ETIQUETA] == 1){
+                if($linha['ST_ETIQUETA'] == 1){
                   echo"<td style=\"text-align:center\"><div class=\"parado\"></div></td>";
                   }
-                if($linha[ST_ETIQUETA] == 2){
+                if($linha['ST_ETIQUETA'] == 2){
                   echo"<td style=\"text-align:center\"><div class=\"executando\"></div></td>";
                 }
-                if($linha[ST_ETIQUETA] == 3){
+                if($linha['ST_ETIQUETA'] == 3){
                   echo"<td style=\"text-align:center\"><div class=\"concluido\"></div></td>";
                 }
 
 
-                if($linha[ST_SILK] == 1){
+                if($linha['ST_SILK'] == 1){
                   echo"<td style=\"text-align:center\"><div class=\"parado\"></div></td>";
                   }
-                if($linha[ST_SILK] == 2){
+                if($linha['ST_SILK'] == 2){
                   echo"<td style=\"text-align:center\"><div class=\"executando\"></div></td>";
                 }
-                if($linha[ST_SILK] == 3){
+                if($linha['ST_SILK'] == 3){
                   echo"<td style=\"text-align:center\"><div class=\"concluido\"></div></td>";
                 }
 
 
 
-                if($linha[ST_BORDADO] == 1){
+                if($linha['ST_BORDADO'] == 1){
                   echo"<td style=\"text-align:center\"><div class=\"parado\"></div></td>";
                   }
-                if($linha[ST_BORDADO] == 2){
+                if($linha['ST_BORDADO'] == 2){
                   echo"<td style=\"text-align:center\"><div class=\"executando\"></div></td>";
                 }
-                if($linha[ST_BORDADO] == 3){
+                if($linha['ST_BORDADO'] == 3){
                   echo"<td style=\"text-align:center\"><div class=\"concluido\"></div></td>";
                 }
 
 
-                if($linha[DS_PREPARACAO] == 1){
+                if($linha['DS_PREPARACAO'] == 1){
                   echo"<td style=\"text-align:center\"><div class=\"parado\"></div></td>";
                   }
-                if($linha[DS_PREPARACAO] == 2){
+                if($linha['DS_PREPARACAO'] == 2){
                   echo"<td style=\"text-align:center\"><div class=\"executando\"></div></td>";
                 }
-                if($linha[DS_PREPARACAO] == 3){
+                if($linha['DS_PREPARACAO'] == 3){
                   echo"<td style=\"text-align:center\"><div class=\"concluido\"></div></td>";
                 }
                 echo"

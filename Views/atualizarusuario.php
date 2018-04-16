@@ -10,60 +10,43 @@ Sessao_CIN::ValidaSessao();
 ?>
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-	<title>Atualizar Usuario</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="stylesheet" type="text/css" href="../css/bootstrap-responsive.min.css">
-  <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-  <script type="text/javascript" scr="../js/bootstrap.min.js"></script>
-  <script>
-    function somenteNomes(num) {
-        var er = /[^a-z.]/;
-        er.lastIndex = 0;
-        var campo = num;
-        if (er.test(campo.value)) {
-          campo.value = "";
-        }
-    }
- </script>
-  <style type="text/css">
-    .a{
-      font-size: 70px;
-      height: 10%;
-      width: 35%;
-    }
-  </style>
+  <head>
+    <meta charset="utf-8">
+    <title>Atualizar Usuario</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <script type="text/javascript" scr="../js/bootstrap.min.js"></script>
+    <script src="../js/editavel.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/editavel.css">
+  </head>
 <body>
  <?php include("menu_topo.php"); ?>
-
-    <div class="container-fluid">
+  <div class="container-fluid">
     <div class="row-fluid">
-    <?php include("menu_lateral.php"); ?>
-    
-        <div class="span9">
+    <?php include("menu_lateral.php"); ?>    
+      <div class="span9">
         <div class="hero-unit">
-        <h1 align="center">Usuario</h1>
+          <h1 align="center">Usuario</h1>
         </div>
-<div class="container">
-     <fieldset>
-      <form method="post" action="../DAO/atualizarusuariodb.php">
-      <legend></legend>
-<div>
-      <label>Nome</label>
-      <input type="hidden" name="codigo" value="<?php echo $codigo?>"/>
-       <input class="form-control input-sm" placeholder="Diga o Nome" onkeyup="somenteNomes(this);" type="text" ng-model="nomes.valor" required="required" value="<?php echo $nome?>"/>
-       <label>e-mail</label>
-      <input type="email" required="required" placeholder="Diga o Email" name="email" value="<?php echo $email?>"/>
-<br>
-    <button class="btn btn-success">Salvar</button>
-    <a href="listartodosusuarios.php" class="btn btn-info">voltar</a>
-<br>
+        <div class="container">
+          <fieldset>
+            <form method="post" action="../DAO/atualizarusuariodb.php">            
+              <div>
+                <label>Nome</label>
+                <input type="hidden" name="codigo" value="<?php echo $codigo?>"/>
+                <input class="form-control input-sm" placeholder="Diga o Nome" onkeyup="somenteNomes(this);" type="text" ng-model="nomes.valor" required="required" value="<?php echo $nome?>"/>
+                <label>e-mail</label>
+                <input type="email" required="required" placeholder="Diga o Email" name="email" value="<?php echo $email?>"/>
+                <br>
+                <button class="btn btn-success">Salvar</button>
+                <a href="listartodosusuarios.php" class="btn btn-info">voltar</a>
+                <br>
+              </div>
+          </form>
+        </fieldset>
+      </div>
     </div>
-</fieldset>
-      </form>
-</div>
-</div>
-</body>
-</head>
+  </body>
+  </head>
 </html>

@@ -6,8 +6,8 @@ Sessao_CIN::ValidaSessao();
 
 $banco = new ConexaoBanco();
 
-$PesquisaId = $_GET["PesquisaID_USUARIO"];
-$PesquisaDs = $_GET["PesquisaDS_EMAIL"];
+$PesquisaId = $_GET['PesquisaID_USUARIO'];
+$PesquisaDs = $_GET['PesquisaDS_EMAIL'];
 
 if($PesquisaId != ""){
     $sql = "SELECT * FROM Usuario  WHERE ID_USUARIO='".$PesquisaId."'";
@@ -93,9 +93,9 @@ $todosusuarios = $banco->executeQuery($sql);
 	<?php
 	while ($linha = mysqli_fetch_array($todosusuarios)) {
 		echo "<tr>";
-		echo "<td>".$linha[ID_USUARIO]."</td>";
-        echo "<td>".$linha[DS_USUARIO]."</td>";
-        echo "<td>".$linha[DS_EMAIL]."</td>";
+		echo "<td>".$linha['ID_USUARIO']."</td>";
+        echo "<td>".$linha['DS_USUARIO']."</td>";
+        echo "<td>".$linha['DS_EMAIL']."</td>";
         echo "<td><a class=\"btn btn-mini btn-warning\" href=\"atualizarusuario.php?DS_EMAIL=$linha[DS_EMAIL]&ID_USUARIO=$linha[ID_USUARIO]& DS_USUARIO=$linha[DS_USUARIO]\"class=\"btn btn-info\">Editar</a>
         &nbsp;&nbsp;&nbsp;
         <a class=\"btn btn-mini btn-danger\" onclick=\"return confirm('Você tem certeza que deseja apagar o Usuario $linha[DS_USUARIO] ?') \"; href=\"../DAO/excluirusuariodb.php?ID_USUARIO=$linha[ID_USUARIO]& DS_USUARIO=$linha[DS_USUARIO]&DS_EMAIL=$linha[DS_EMAIL]\"class=\"btn btn-danger\">Excluir</a></td>";

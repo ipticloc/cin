@@ -93,8 +93,8 @@ $todosmaterias = $banco->executeQuery($sql);
         <?php
         while ($linha = mysqli_fetch_array($todosmaterias)) {
           echo "<tr>";
-          echo "<td>".$linha[ID_TIPOMATERIAL]."</td>";
-          echo "<td>".$linha[DS_TIPOMATERIAL]."</td>";
+          echo "<td>".$linha['ID_TIPOMATERIAL']."</td>";
+          echo "<td>".$linha['DS_TIPOMATERIAL']."</td>";
           echo "<td><a class=\"btn btn-mini btn-warning\" href=\"atualizartipomaterial.php?ID_TIPOMATERIAL=$linha[ID_TIPOMATERIAL]& DS_TIPOMATERIAL=$linha[DS_TIPOMATERIAL]\"class=\"btn btn-info\">Editar</a>&nbsp;&nbsp;&nbsp;
 
           <a class=\"btn btn-mini btn-danger\" onclick=\"return confirm('Você tem certeza que deseja apagar?') \"; href=\"../DAO/excluirtipomaterialdb.php?ID_TIPOMATERIAL=$linha[ID_TIPOMATERIAL]& DS_TIPOMATERIAL=$linha[DS_TIPOMATERIAL]\"class=\"btn btn-danger\">Excluir</a></td>";
