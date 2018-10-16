@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .a{
 	font-size: 70px;
     height: 10%;
@@ -117,3 +118,88 @@
 .erno{
   margin-top: -90px;
 }
+=======
+.a{
+	font-size: 70px;
+    height: 10%;
+    width: 35%;
+    }
+    
+.b{
+    font-size: 40px;
+    width: 20%;
+    }
+
+.c {
+    color: red;
+    }
+
+.parado{
+    
+    display: inline-block; 
+    border-radius: 50%; 
+    height: 10px; width: 10px; 
+    border: 1px solid #000000; 
+    background-color:#DD0000;
+  }
+
+.executando{
+    
+    display: inline-block; 
+    border-radius: 50%; 
+    height: 10px; width: 10px;
+    border: 1px solid #000000; 
+    background-color: #FFFF00;
+
+  }
+
+.concluido{
+    display: inline-block; 
+    border-radius: 50%; 
+    height: 10px; width: 10px; 
+    border: 1px solid #000000; 
+    background-color: #00DD00;
+    
+  }
+
+.principal {
+  float: left;
+  background-color: red;
+}
+
+.direita{
+  float: right;
+  background-color:blue;
+}
+      body {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-color: #f5f5f5;
+      }
+
+      .form-signin {
+        max-width: 300px;
+        padding: 19px 29px 29px;
+        margin: 0 auto 20px;
+        background-color: #fff;
+        border: 1px solid #e5e5e5;
+        -webkit-border-radius: 5px;
+           -moz-border-radius: 5px;
+                border-radius: 5px;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+                box-shadow: 0 1px 2px rgba(0,0,0,.05);
+      }
+      
+      .form-signin .form-signin-heading,
+      .form-signin .checkbox {
+        margin-bottom: 10px;
+      }
+      .form-signin input[type="text"],
+      .form-signin input[type="password"] {
+        font-size: 16px;
+        height: auto;
+        margin-bottom: 15px;
+        padding: 7px 9px;
+      }
+>>>>>>> df27015e8983967067fe6b0cf51ff9010c2f1465
