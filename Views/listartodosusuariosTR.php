@@ -5,7 +5,19 @@ include '../Classes/Sessao_CIN.php';
 Sessao_CIN::ValidaSessao();
 
 $banco = new ConexaoBanco();
-$sql = "SELECT * FROM Usuario";
+
+$PesquisaId = $_GET['PesquisaID_USUARIO'];
+$PesquisaDs = $_GET['PesquisaDS_EMAIL'];
+
+if($PesquisaId != ""){
+    $sql = "SELECT * FROM Usuario  WHERE ID_USUARIO='".$PesquisaId."'";
+}else if($PesquisaDs != ""){
+    $sql = "SELECT * FROM Usuario  WHERE DS_EMAIL='".$PesquisaDs."'";
+}
+else{
+    $sql = "SELECT * FROM Usuario";
+}
+
 $todosusuarios = $banco->executeQuery($sql);
 
 ?>

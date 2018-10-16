@@ -9,7 +9,7 @@ $email =$_POST['email'];
 $codigo = $_POST['codigo'];
 $senha = $_POST['senha'];
 
-$sql = "UPDATE `Usuario` SET `DS_USUARIO` = ('".$nome."'), `DS_EMAIL` = ('".$email."'),`DS_SENHA` = ('".$senha."') 
+$sql = "UPDATE `usuario` SET `DS_USUARIO` = ('".$nome."'), `DS_EMAIL` = ('".$email."'),`DS_SENHA` = ('".$senha."') 
 WHERE `ID_USUARIO` = ('".$codigo."')";
 
 $banco = new ConexaoBanco();

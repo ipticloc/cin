@@ -7,7 +7,7 @@ Sessao_CIN::ValidaSessao();
 $ID_TIPOMATERIAL = $_GET['ID_TIPOMATERIAL'];
 
 
-$sql = "DELETE FROM `CIN_DB`.`TiposMateriais` WHERE `ID_TIPOMATERIAL`= ('".$ID_TIPOMATERIAL."')";
+$sql = "DELETE FROM `cin_db`.`tiposmateriais` WHERE `ID_TIPOMATERIAL`= ('".$ID_TIPOMATERIAL."')";
 
 //$conexao= mysqli_connect("127.0.0.1","root","cloc","CIN_DB") or die('Erro na conexão');
 

@@ -13,7 +13,7 @@ $endereço= $_POST['DS_ENDEREÇO'];
 $telefone=  $_POST['NR_TELEFONE'];
 $email= $_POST['DS_EMAIL'];
 
-$sql="INSERT INTO `CIN_DB`.`Clientes`(`NM_CLIENTE`,`DS_ENDEREÇO`,`NR_TELEFONE`,`DS_EMAIL`,`DS_CPF_CNPJ`) values ('".$nome."','".$endereço."','".$telefone."','".$email."','".$cpf."')";
+$sql="INSERT INTO `cin_db`.`clientes`(`NM_CLIENTE`,`DS_ENDEREÇO`,`NR_TELEFONE`,`DS_EMAIL`,`DS_CPF_CNPJ`) values ('".$nome."','".$endereço."','".$telefone."','".$email."','".$cpf."')";
 
 
 

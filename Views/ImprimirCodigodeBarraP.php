@@ -1,10 +1,10 @@
-﻿<?php
+<?php
 include '../Classes/Sessao_CIN.php';
 Sessao_CIN::ValidaSessao();
 
- $ID = $_GET['ID_TIPOMATERIAL'];
- $CD_BARRAS = $_GET['CD_BARRAS'];
- $DS_T = $_GET['DS_TIPOMATERIAL'];
+ $ID = $_GET['ID_ITENSPEDIDO'];
+ $CD_BARRASP = $_GET['CD_BARRASP'];
+ $DS_I = $_GET['DS_ITEM']
 ?>
 <!DOCTYPE html>
 <html>
@@ -32,14 +32,15 @@ Sessao_CIN::ValidaSessao();
       <form method="post">                                      
         <br>                
         <h3>Código de Barras do Material</h3>
-        <label><?php  echo "<h5>Nome do Material: $DS_T </h5>"?></label>        
+        <label><?php  echo "<h5>Nome do Material: $DS_I </h5>"?></label>        
         <br>
         <br>
         <br>        
         <div id='cb'>
           <?php
             echo "";
-            echo "* "."$CD_BARRAS"." *";
+            echo "* "."$CD_BARRASP"." *";
+            //gerador de código de barras.
           ?>
           <br>
         </div>
@@ -51,7 +52,7 @@ Sessao_CIN::ValidaSessao();
       <br>
       <br>
       <h5>Informações do produto:</h5>
-      <textarea class="nos" placeholder="Ex.: Data de entrega, destinatario, descrição do material..." maxlength="704" rows="12"></textarea>
+      <textarea class="nos" placeholder="Ex.: Data de entrega, destinatario, descrinção do material..." maxlength="704" rows="12"></textarea>
     </center>                    
   </body>
 </html>

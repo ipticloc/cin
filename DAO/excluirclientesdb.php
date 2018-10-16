@@ -1,4 +1,4 @@
-/<?php
+<?php
 include '../Classes/ConexaoBanco.php';
 
 include '../Classes/Sessao_CIN.php';

@@ -5,8 +5,8 @@ class ConexaoBanco
 {
 	var $host="localhost";
 	var $user="root";
-	var $password="cloc";
-	var $database="CIN_DB";
+	var $password="";
+	var $database="cin_db";
 
 	var $query;
 	var $link;
@@ -52,7 +52,7 @@ class ConexaoBanco
 		else
 		{
 			echo "Ocorreu um erro na execução da SQL";
-			echo "Erro :" . mysqli_error();
+			echo "Erro: " . mysqli_error();
 			echo "SQL: " . $query;
 			die();
 			disconnect();

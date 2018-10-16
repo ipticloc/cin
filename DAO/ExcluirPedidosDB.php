@@ -7,7 +7,7 @@ Sessao_CIN::ValidaSessao();
 $ID_PEDIDO = $_GET['ID_PEDIDO'];
 
   
-$sql = "DELETE FROM `CIN_DB`.`Pedidos`
+$sql = "DELETE FROM `cin_db`.`pedidos`
 WHERE  ID_PEDIDO = '".$ID_PEDIDO."'; ";
 
 

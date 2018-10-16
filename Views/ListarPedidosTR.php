@@ -3,14 +3,24 @@ include '../Classes/ConexaoBanco.php';
 include '../Classes/Sessao_CIN.php';
 Sessao_CIN::ValidaSessao();
 $banco = new ConexaoBanco();
-$sql = "SELECT * FROM Pedidos INNER JOIN Clientes ON Pedidos.ID_CLIENTE = Clientes.ID_CLIENTE";
+$PesquisaId = $_GET["PesquisaIdPedido"];
+$PesquisaNmCliente = $_GET["PesquisaNmCliente"];
+
+if($PesquisaId != ""){
+    $sql = "SELECT * FROM Pedidos INNER JOIN Clientes ON Pedidos.ID_CLIENTE = Clientes.ID_CLIENTE  WHERE ID_PEDIDO='".$PesquisaId."'";
+}else if($PesquisaNmCliente != ""){
+    $sql = "SELECT * FROM Pedidos INNER JOIN Clientes ON Pedidos.ID_CLIENTE = Clientes.ID_CLIENTE  WHERE NM_CLIENTE='".$PesquisaNmCliente."'";
+}
+else{
+    $sql = "SELECT * FROM Pedidos INNER JOIN Clientes ON Pedidos.ID_CLIENTE = Clientes.ID_CLIENTE";
+}
 $todospedidos = $banco->executeQuery($sql);
 ?>
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
-  	<title>LISTAR TUDO</title>        
+  	<title>LISTAR TUDO</title>
     <link rel="stylesheet" type="text/css" href="../css/bootstrap-responsive.min.css">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
     <script type="text/javascript" scr="../js/bootstrap.min.js"></script>
@@ -35,7 +45,7 @@ $todospedidos = $banco->executeQuery($sql);
             <div class="container">
               <br>
               <label>Pesquisa : </label>
-              <form class="form-inline" action="ListarPedidosTR.php">
+              <form class="form-inline">
                 <label>ID</label>
                 <input class="form-control input-sm" name="PesquisaIdPedido" required="required" onkeyup="somenteNumeros(this);" type="text"  ng-model="numero.valor" placeholder="Ex: 321" />
                 <label>NOME CLIENTE</label>

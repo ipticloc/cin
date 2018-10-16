@@ -15,8 +15,7 @@
               <li class="nav-header">Pedidos</li>
               <li><a href="CadastroPedidos.php">Cadastro</a></li>
               <li><a href="ListarPedidos.php">Listas de Pedidos</a></li>
-              <li><a href="PesquisarItenPedidoCodigoDeBarra.php">Codigo de Barra</a></li>
-              
+              <li><a href="PesquisarItenPedidoCodigoDeBarra.php">Codigo de Barra</a></li>              
             </ul>
           </div><!--/.well -->
         </div><!--/span-->

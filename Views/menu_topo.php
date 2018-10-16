@@ -1,4 +1,3 @@
-
 <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container-fluid">
@@ -15,9 +14,9 @@
             <li >
             <a href="#"><img class="a" src="logo-cin.png"></a>
             </li>
-              <li class="active"><a href="#">Pagina Inicial</a></li>
-              <li><a href="#about">Sobre</a></li>
-              <li><a href="#contact">Contato</a></li>
+              <li class="active"><a href="menu.php">Pagina Inicial</a></li>
+              <li><a href="http://www.ipti.org.br/pt/sobre/" target="blank">Sobre</a></li>
+              <li><a href="http://www.ipti.org.br/pt/contato/" target="blank">Contato</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>

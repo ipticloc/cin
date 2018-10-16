@@ -5,7 +5,19 @@ include '../Classes/Sessao_CIN.php';
 Sessao_CIN::ValidaSessao();
 
 $banco = new ConexaoBanco();
-$sql = "SELECT * FROM TiposMateriais";
+
+$PesquisaId = $_GET["PesquisaID_TIPOMATERIAL"];
+$PesquisaDs = $_GET["PesquisaDS_TIPOMATERIAL"];
+
+if($PesquisaId != ""){
+    $sql = "SELECT * FROM TiposMateriais  WHERE ID_TIPOMATERIAL='".$PesquisaId."'";
+}else if($PesquisaDs != ""){
+    $sql = "SELECT * FROM TiposMateriais  WHERE DS_TIPOMATERIAL='".$PesquisaDs."'";
+}
+else{
+    $sql = "SELECT * FROM TiposMateriais";
+}
+
 $todosmaterias = $banco->executeQuery($sql);
 
 ?>
@@ -55,9 +67,7 @@ $todosmaterias = $banco->executeQuery($sql);
                   echo "<td>".$linha['DS_TIPOMATERIAL']."</td>";
                   echo "<td><a class=\"btn btn-mini btn-warning\" href=\"atualizartipomaterial.php?ID_TIPOMATERIAL=$linha[ID_TIPOMATERIAL]& DS_TIPOMATERIAL=$linha[DS_TIPOMATERIAL]\"class=\"btn btn-info\">Editar</a>&nbsp;&nbsp;&nbsp;
 
-                  <a class=\"btn btn-mini btn-danger\" onclick=\"return confirm('Você tem certeza que deseja apagar?') \"; href=\"../DAO/excluirtipomaterialdb.php?ID_TIPOMATERIAL=$linha[ID_TIPOMATERIAL]& DS_TIPOMATERIAL=$linha[DS_TIPOMATERIAL]\"class=\"btn btn-danger\">Excluir</a>&nbsp;&nbsp;&nbsp
-
-                  <a class=\"btn btn-mini btn-success\" href=\"ImprimirCodigodeBarra.php?ID_TIPOMATERIAL=$linha[ID_TIPOMATERIAL]& DS_TIPOMATERIAL=$linha[DS_TIPOMATERIAL]& CD_BARRAS=$linha[CD_BARRAS]\"class=\"btn btn-info\"  target='blank'>Código</a></td>";
+                  <a class=\"btn btn-mini btn-danger\" onclick=\"return confirm('Você tem certeza que deseja apagar?') \"; href=\"../DAO/excluirtipomaterialdb.php?ID_TIPOMATERIAL=$linha[ID_TIPOMATERIAL]& DS_TIPOMATERIAL=$linha[DS_TIPOMATERIAL]\"class=\"btn btn-danger\">Excluir</a></td>";
                   echo "</tr>";
                 }
               ?>
